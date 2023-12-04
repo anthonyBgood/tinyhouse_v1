@@ -1,9 +1,9 @@
 
-//import { IResolvers } from "graphql-tools";
+import { IResolvers } from "graphql-tools";
 import { listings } from "../listings";
 
+export const resolvers: IResolvers = {
 
-export const resolvers = {
 
     Query:{
         listings: () => {
