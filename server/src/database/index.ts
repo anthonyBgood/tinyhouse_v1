@@ -1,10 +1,7 @@
 import { MongoClient } from "mongodb";
 import { Database } from "../lib/types"
 
-import { user, userPassword, cluster } from "./coonectionInfo"
-
-const url = `mongodb+srv://${user}:${userPassword}@${cluster}.isvgdde.mongodb.net/?retryWrites=true&w=majority`;
-
+const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_USER_PASSWORD}@${process.env.DB_CLUSTER}.isvgdde.mongodb.net/?retryWrites=true&w=majority`;
 
 export const connectDatabase = async(): Promise<Database> => {
     
